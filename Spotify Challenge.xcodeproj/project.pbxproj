@@ -15,6 +15,10 @@
 		394CFF3129403E49006FB3A9 /* Spotify_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394CFF3029403E49006FB3A9 /* Spotify_ChallengeTests.swift */; };
 		394CFF3B29403E49006FB3A9 /* Spotify_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394CFF3A29403E49006FB3A9 /* Spotify_ChallengeUITests.swift */; };
 		394CFF3D29403E49006FB3A9 /* Spotify_ChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394CFF3C29403E49006FB3A9 /* Spotify_ChallengeUITestsLaunchTests.swift */; };
+		39CD707C2940E61500559D0E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD707B2940E61500559D0E /* TabBarController.swift */; };
+		39CD707E2940E9A500559D0E /* NewReleasesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD707D2940E9A500559D0E /* NewReleasesController.swift */; };
+		39CD70802940E9D400559D0E /* TrendingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD707F2940E9D400559D0E /* TrendingController.swift */; };
+		39CD70822940E9E700559D0E /* ArtistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD70812940E9E700559D0E /* ArtistController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		394CFF3629403E49006FB3A9 /* Spotify ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Spotify ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		394CFF3A29403E49006FB3A9 /* Spotify_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotify_ChallengeUITests.swift; sourceTree = "<group>"; };
 		394CFF3C29403E49006FB3A9 /* Spotify_ChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotify_ChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		39CD707B2940E61500559D0E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		39CD707D2940E9A500559D0E /* NewReleasesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesController.swift; sourceTree = "<group>"; };
+		39CD707F2940E9D400559D0E /* TrendingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingController.swift; sourceTree = "<group>"; };
+		39CD70812940E9E700559D0E /* ArtistController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,10 @@
 				394CFF1929403E48006FB3A9 /* AppDelegate.swift */,
 				394CFF1B29403E48006FB3A9 /* SceneDelegate.swift */,
 				394CFF1D29403E48006FB3A9 /* ViewController.swift */,
+				39CD707B2940E61500559D0E /* TabBarController.swift */,
+				39CD707D2940E9A500559D0E /* NewReleasesController.swift */,
+				39CD707F2940E9D400559D0E /* TrendingController.swift */,
+				39CD70812940E9E700559D0E /* ArtistController.swift */,
 				394CFF2229403E48006FB3A9 /* Assets.xcassets */,
 				394CFF2429403E48006FB3A9 /* LaunchScreen.storyboard */,
 				394CFF2729403E48006FB3A9 /* Info.plist */,
@@ -255,8 +267,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				394CFF1E29403E48006FB3A9 /* ViewController.swift in Sources */,
+				39CD707C2940E61500559D0E /* TabBarController.swift in Sources */,
 				394CFF1A29403E48006FB3A9 /* AppDelegate.swift in Sources */,
+				39CD70822940E9E700559D0E /* ArtistController.swift in Sources */,
 				394CFF1C29403E48006FB3A9 /* SceneDelegate.swift in Sources */,
+				39CD70802940E9D400559D0E /* TrendingController.swift in Sources */,
+				39CD707E2940E9A500559D0E /* NewReleasesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
