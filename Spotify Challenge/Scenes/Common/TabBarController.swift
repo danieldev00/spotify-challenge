@@ -12,6 +12,9 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .white
+        UITabBar.appearance().backgroundColor = .white
+        
         viewControllers = [
             createNavController(for: NewReleasesController(), title: "New Releases", icon: ""),
             createNavController(for: NewReleasesController(), title: "Trending", icon: "")
@@ -22,6 +25,7 @@ class TabBarController: UITabBarController {
         let navController = UINavigationController(rootViewController: viewController)
         navController.tabBarItem.title = title
         navController.tabBarItem.image = UIImage(named: icon)
+        navController.navigationBar.backgroundColor = .white
         navController.navigationBar.prefersLargeTitles = true
         viewController.navigationItem.title = title
         return navController
