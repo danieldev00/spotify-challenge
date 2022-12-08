@@ -20,7 +20,7 @@ class NewReleaseCell: UITableViewCell {
     
     private let albumNameLabel: UILabel = {
         let label = UILabel()
-        label.font = .appMedium(size: 16)
+        label.font = .appBold(size: 16)
         label.numberOfLines = 1
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -29,6 +29,14 @@ class NewReleaseCell: UITableViewCell {
     private let artistNameLabel: UILabel = {
         let label = UILabel()
         label.font = .appMedium(size: 14)
+        label.numberOfLines = 1
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let releaseDateLabel: UILabel = {
+        let label = UILabel()
+        label.font = .appMedium(size: 12)
         label.numberOfLines = 1
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -63,6 +71,13 @@ class NewReleaseCell: UITableViewCell {
         artistNameLabel.leadingTo(view: albumImageView, padding: 8)
         artistNameLabel.trailingToSuperView(padding: 16)
         artistNameLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        
+        contentView.addSubview(releaseDateLabel)
+        
+        releaseDateLabel.topTo(view: artistNameLabel, padding: 2)
+        releaseDateLabel.leadingTo(view: albumImageView, padding: 8)
+        releaseDateLabel.trailingToSuperView(padding: 16)
+        releaseDateLabel.heightAnchor.constraint(equalToConstant: 18).isActive = true
     }
     
     func setup(album: Album) {
@@ -74,5 +89,7 @@ class NewReleaseCell: UITableViewCell {
         albumNameLabel.text = album.name
         
         artistNameLabel.text = album.artists.first?.name ?? ""
+        
+        releaseDateLabel.text = album.releaseDate
     }
 }
