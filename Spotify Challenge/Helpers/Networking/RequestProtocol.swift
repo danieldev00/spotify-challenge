@@ -69,8 +69,6 @@ extension RequestProtocol {
             urlRequest.httpBody = try JSONSerialization.data(withJSONObject: params)
         }
         
-        print("HOLA HOST", urlRequest)
-        
         return urlRequest
     }
     

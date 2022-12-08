@@ -24,7 +24,7 @@ class APIManager: APIManagerProtocol {
                 completionHandler(.failure(err))
                 return
             }
-            
+                        
             guard let data = data,
                   let response = response as? HTTPURLResponse,
                   response.statusCode == 200 else {

@@ -10,8 +10,7 @@ import UIKit
 class NewReleasesController: UIViewController {
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero)
-        tableView.separatorStyle = .none
-        tableView.rowHeight = 80.0
+        tableView.rowHeight = 96.0
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -26,7 +25,14 @@ class NewReleasesController: UIViewController {
         
         view.backgroundColor = .background
         
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(NewReleaseCell.self, forCellReuseIdentifier: "ReleaseCell")
+        view.addSubview(tableView)
         
+        tableView.fullToSuperView()
+        
+        fetchNewReleases()
     }
     
     private func fetchNewReleases() {
@@ -36,7 +42,11 @@ class NewReleasesController: UIViewController {
                 switch result {
                 case .success(let container):
                     self.newReleases = container.albums.items
-                    self.tableView.reloadData()
+                    
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                    
                     break
                 case .failure(let err):
                     print("Error", err)
@@ -52,6 +62,11 @@ extension NewReleasesController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReleaseCell", for: indexPath) as! NewReleaseCell
+        
+        let album = newReleases[indexPath.row]
+        cell.setup(album: album)
+        
+        return cell
     }
 }

@@ -32,6 +32,10 @@
 		39CD7098294131C900559D0E /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD7097294131C900559D0E /* RequestProtocol.swift */; };
 		39CD709A294131F900559D0E /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD7099294131F900559D0E /* RequestType.swift */; };
 		39CD709C294134ED00559D0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD709B294134ED00559D0E /* Constants.swift */; };
+		39DC185C29422BA6003EB688 /* NewReleaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DC185B29422BA6003EB688 /* NewReleaseCell.swift */; };
+		39DC185E29422DEA003EB688 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DC185D29422DEA003EB688 /* UIView+Ext.swift */; };
+		39DC186029423691003EB688 /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DC185F29423691003EB688 /* UIFont+Ext.swift */; };
+		39DC186329423CBF003EB688 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 39DC186229423CBF003EB688 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +85,9 @@
 		39CD7097294131C900559D0E /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		39CD7099294131F900559D0E /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		39CD709B294134ED00559D0E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		39DC185B29422BA6003EB688 /* NewReleaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleaseCell.swift; sourceTree = "<group>"; };
+		39DC185D29422DEA003EB688 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		39DC185F29423691003EB688 /* UIFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39DC186329423CBF003EB688 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				39CD70852940EB2500559D0E /* UIColor+Ext.swift */,
+				39DC185D29422DEA003EB688 /* UIView+Ext.swift */,
+				39DC185F29423691003EB688 /* UIFont+Ext.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -283,6 +293,7 @@
 		39DC185829422B1F003EB688 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				39DC185B29422BA6003EB688 /* NewReleaseCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -303,6 +314,9 @@
 			dependencies = (
 			);
 			name = "Spotify Challenge";
+			packageProductDependencies = (
+				39DC186229423CBF003EB688 /* Kingfisher */,
+			);
 			productName = "Spotify Challenge";
 			productReference = 394CFF1629403E48006FB3A9 /* Spotify Challenge.app */;
 			productType = "com.apple.product-type.application";
@@ -375,6 +389,9 @@
 				Base,
 			);
 			mainGroup = 394CFF0D29403E47006FB3A9;
+			packageReferences = (
+				39DC186129423CBF003EB688 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 394CFF1729403E48006FB3A9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -424,8 +441,10 @@
 				394CFF1A29403E48006FB3A9 /* AppDelegate.swift in Sources */,
 				39CD70822940E9E700559D0E /* ArtistController.swift in Sources */,
 				39483E0B2941AA2C0071E668 /* RequestManager.swift in Sources */,
+				39DC186029423691003EB688 /* UIFont+Ext.swift in Sources */,
 				39CD7098294131C900559D0E /* RequestProtocol.swift in Sources */,
 				39483E102941B8780071E668 /* Album.swift in Sources */,
+				39DC185E29422DEA003EB688 /* UIView+Ext.swift in Sources */,
 				39483E092941A9760071E668 /* APIManager.swift in Sources */,
 				394CFF1C29403E48006FB3A9 /* SceneDelegate.swift in Sources */,
 				39CD709C294134ED00559D0E /* Constants.swift in Sources */,
@@ -434,6 +453,7 @@
 				39CD70862940EB2500559D0E /* UIColor+Ext.swift in Sources */,
 				39CD70802940E9D400559D0E /* TrendingController.swift in Sources */,
 				39CD707E2940E9A500559D0E /* NewReleasesController.swift in Sources */,
+				39DC185C29422BA6003EB688 /* NewReleaseCell.swift in Sources */,
 				39483E172941BCF30071E668 /* Artist.swift in Sources */,
 				39CD709A294131F900559D0E /* RequestType.swift in Sources */,
 				39483E152941BCA90071E668 /* Paginator.swift in Sources */,
@@ -762,6 +782,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		39DC186129423CBF003EB688 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		39DC186229423CBF003EB688 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 39DC186129423CBF003EB688 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 394CFF0E29403E47006FB3A9 /* Project object */;
 }

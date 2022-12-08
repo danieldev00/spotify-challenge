@@ -10,6 +10,6 @@ import Foundation
 struct Constants {
     struct API {
         static let host = "https://api.spotify.com/v1"
-        static let auth = "Bearer BQApYbsOK4fSSnjtp1jGbYfUS3sCDFWDF4eG-4gNALhWyB59ihDC-yoSxbabiih2PLjCTMgDlmjc7MQ4dEIprTb9ux8uKF8b4alPBg0ZCSASxluED9jm9rSZKY0g1jT4hiBi2ECzWB8-n_sPOzNhY_fmXYe3k26ivg4ivUglFb8ZSC67QyfsoIGPT6t4BMA"
+        static let auth = "Bearer BQDT8aLmi6jrB_t6rRaVUNlOdsnHp5bC7F6mHFMWwOAZznz4A8YHZ-5XL1OCQ6zP3GkkRfb8Ta2kj-dCBSRG3dlecO5dax4DThPcTQ08ruhwBqK-QDIRRcVNsqAJkadlTpxjGfF9IT9IIn2OYs96vckVHgFEB5ty53402gX0VbV6eevw6see0MO7-HSkoCg"
     }
 }
