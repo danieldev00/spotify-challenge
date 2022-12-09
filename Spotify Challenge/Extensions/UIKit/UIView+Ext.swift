@@ -28,6 +28,16 @@ extension UIView {
         
         return constraints
     }
+    
+    @discardableResult func setHeight(_ size: CGFloat) -> [NSLayoutConstraint] {
+        let constraints = [
+            heightAnchor.constraint(equalToConstant: size)
+        ]
+        
+        safeSuperview().addConstraints(constraints)
+        
+        return constraints
+    }
 
     @discardableResult func topToSuperView(padding: CGFloat = 0.0) -> [NSLayoutConstraint] {
         let constraints = [

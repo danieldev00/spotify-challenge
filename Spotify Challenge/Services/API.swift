@@ -9,7 +9,7 @@ import Foundation
 
 enum API: RequestProtocol {
     case newReleases(offset: Int)
-    case artist(id: Int)
+    case artist(id: String)
     case genre
 }
 

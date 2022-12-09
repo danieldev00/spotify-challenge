@@ -84,4 +84,16 @@ extension NewReleasesController: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sections = dataSource[indexPath.section]
+        
+        if case .releases(let albums) = sections {
+            let album = albums[indexPath.row]
+            guard let artist = album.artists.first else { return }
+            let viewModel = ArtistViewModel(artist: artist)
+            let viewController = ArtistController(viewModel: viewModel)
+            self.present(viewController, animated: true)
+        }
+    }
 }

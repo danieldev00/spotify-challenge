@@ -38,6 +38,9 @@
 		39DC186529426384003EB688 /* NewReleasesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DC186429426384003EB688 /* NewReleasesViewModel.swift */; };
 		9055D4872942B9FB003F70AB /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055D4862942B9FB003F70AB /* LoadingCell.swift */; };
 		9055D4892942BE48003F70AB /* NewReleaseEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055D4882942BE48003F70AB /* NewReleaseEmptyCell.swift */; };
+		9055D48C2942F790003F70AB /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055D48B2942F790003F70AB /* GradientView.swift */; };
+		9055D48E29430419003F70AB /* ArtistInfoVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055D48D29430419003F70AB /* ArtistInfoVIew.swift */; };
+		9055D49029430D7F003F70AB /* ArtistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055D48F29430D7F003F70AB /* ArtistViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +95,9 @@
 		39DC186429426384003EB688 /* NewReleasesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesViewModel.swift; sourceTree = "<group>"; };
 		9055D4862942B9FB003F70AB /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
 		9055D4882942BE48003F70AB /* NewReleaseEmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleaseEmptyCell.swift; sourceTree = "<group>"; };
+		9055D48B2942F790003F70AB /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		9055D48D29430419003F70AB /* ArtistInfoVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistInfoVIew.swift; sourceTree = "<group>"; };
+		9055D48F29430D7F003F70AB /* ArtistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +243,8 @@
 			isa = PBXGroup;
 			children = (
 				39CD70812940E9E700559D0E /* ArtistController.swift */,
+				9055D48F29430D7F003F70AB /* ArtistViewModel.swift */,
+				9055D48A2942F765003F70AB /* Views */,
 			);
 			path = Artist;
 			sourceTree = "<group>";
@@ -244,6 +252,7 @@
 		39CD70912940EF5200559D0E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9055D48B2942F790003F70AB /* GradientView.swift */,
 				39CD707B2940E61500559D0E /* TabBarController.swift */,
 				9055D4862942B9FB003F70AB /* LoadingCell.swift */,
 			);
@@ -292,6 +301,14 @@
 			children = (
 				39DC185B29422BA6003EB688 /* NewReleaseCell.swift */,
 				9055D4882942BE48003F70AB /* NewReleaseEmptyCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9055D48A2942F765003F70AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9055D48D29430419003F70AB /* ArtistInfoVIew.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -438,7 +455,9 @@
 				39CD707C2940E61500559D0E /* TabBarController.swift in Sources */,
 				394CFF1A29403E48006FB3A9 /* AppDelegate.swift in Sources */,
 				39CD70822940E9E700559D0E /* ArtistController.swift in Sources */,
+				9055D48C2942F790003F70AB /* GradientView.swift in Sources */,
 				39DC186529426384003EB688 /* NewReleasesViewModel.swift in Sources */,
+				9055D48E29430419003F70AB /* ArtistInfoVIew.swift in Sources */,
 				39483E0B2941AA2C0071E668 /* RequestManager.swift in Sources */,
 				39DC186029423691003EB688 /* UIFont+Ext.swift in Sources */,
 				39CD7098294131C900559D0E /* RequestProtocol.swift in Sources */,
@@ -448,6 +467,7 @@
 				39483E092941A9760071E668 /* APIManager.swift in Sources */,
 				394CFF1C29403E48006FB3A9 /* SceneDelegate.swift in Sources */,
 				39CD709C294134ED00559D0E /* Constants.swift in Sources */,
+				9055D49029430D7F003F70AB /* ArtistViewModel.swift in Sources */,
 				39483E132941BC970071E668 /* ReleaseContainer.swift in Sources */,
 				39483E0D2941B0B80071E668 /* API.swift in Sources */,
 				39CD70862940EB2500559D0E /* UIColor+Ext.swift in Sources */,
