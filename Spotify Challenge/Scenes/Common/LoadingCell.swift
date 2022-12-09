@@ -19,6 +19,12 @@ class LoadingCell: UITableViewCell {
     }
     
     private func setupView() {
+        backgroundColor = .background
+        
+        let selectedBackground = UIView()
+        selectedBackground.backgroundColor = .clear
+        selectedBackgroundView = selectedBackground
+        
         let spinner = UIActivityIndicatorView(style: .medium)
         
         spinner.translatesAutoresizingMaskIntoConstraints = false

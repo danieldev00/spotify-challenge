@@ -21,6 +21,7 @@ class NewReleaseCell: UITableViewCell {
     private let albumNameLabel: UILabel = {
         let label = UILabel()
         label.font = .appBold(size: 16)
+        label.textColor = .white
         label.numberOfLines = 1
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -29,6 +30,7 @@ class NewReleaseCell: UITableViewCell {
     private let artistNameLabel: UILabel = {
         let label = UILabel()
         label.font = .appMedium(size: 14)
+        label.textColor = .white
         label.numberOfLines = 1
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -37,6 +39,7 @@ class NewReleaseCell: UITableViewCell {
     private let releaseDateLabel: UILabel = {
         let label = UILabel()
         label.font = .appMedium(size: 12)
+        label.textColor = .white
         label.numberOfLines = 1
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -52,6 +55,12 @@ class NewReleaseCell: UITableViewCell {
     }
     
     private func setupView() {
+        backgroundColor = .background
+        
+        let selectedBackground = UIView()
+        selectedBackground.backgroundColor = .clear
+        selectedBackgroundView = selectedBackground
+        
         contentView.addSubview(albumImageView)
         
         albumImageView.makeSquare(80)

@@ -12,6 +12,8 @@ extension UIColor {
     
     static let background = UIColor(red: 25/255, green: 20/255, blue: 20/255, alpha: 1.0)
     
+    static let navigation = UIColor(red: 41/255, green: 41/255, blue: 41/255, alpha: 1.0)
+    
     static var random: UIColor {
         return UIColor(
             red: .random(in: 0...1),

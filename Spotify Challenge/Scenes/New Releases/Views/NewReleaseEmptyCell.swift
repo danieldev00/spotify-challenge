@@ -28,6 +28,12 @@ class NewReleaseEmptyCell: UITableViewCell {
     }
     
     private func setupView() {
+        backgroundColor = .background
+        
+        let selectedBackground = UIView()
+        selectedBackground.backgroundColor = .clear
+        selectedBackgroundView = selectedBackground
+        
         contentView.addSubview(label)
         
         label.centerVertically()

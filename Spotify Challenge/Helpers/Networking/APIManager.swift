@@ -19,7 +19,7 @@ class APIManager: APIManagerProtocol {
     }
     
     func perform(_ request: RequestProtocol, completionHandler: @escaping (Result<Data, Error>) -> ()) throws {
-        let token = "Bearer" + Constants.API.auth
+        let token = "Bearer " + Constants.API.auth
         
         try URLSession.shared.dataTask(with: request.createURLRequest(authToken: token)) { (data, response, error) in
             if let err = error {

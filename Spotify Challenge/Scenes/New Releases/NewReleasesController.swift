@@ -11,6 +11,7 @@ class NewReleasesController: UIViewController {
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero)
         tableView.rowHeight = 96.0
+        tableView.backgroundColor = .background
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -31,6 +32,7 @@ class NewReleasesController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .background
+        navigationController?.navigationBar.barTintColor = .white
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -44,6 +46,12 @@ class NewReleasesController: UIViewController {
         viewModel.fetchNewReleases { [weak self] sections in
             self?.dataSource = sections
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.navigationBar.tintColor = .blue
     }
 }
 
