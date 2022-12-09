@@ -15,4 +15,8 @@ struct Paginator: Codable {
     let offset: Int?
     let previous: String?
     let total: Int?
+    
+    var hasMore: Bool {
+        return next != nil
+    }
 }

@@ -23,7 +23,6 @@
 		394CFF3D29403E49006FB3A9 /* Spotify_ChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394CFF3C29403E49006FB3A9 /* Spotify_ChallengeUITestsLaunchTests.swift */; };
 		39CD707C2940E61500559D0E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD707B2940E61500559D0E /* TabBarController.swift */; };
 		39CD707E2940E9A500559D0E /* NewReleasesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD707D2940E9A500559D0E /* NewReleasesController.swift */; };
-		39CD70802940E9D400559D0E /* TrendingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD707F2940E9D400559D0E /* TrendingController.swift */; };
 		39CD70822940E9E700559D0E /* ArtistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD70812940E9E700559D0E /* ArtistController.swift */; };
 		39CD70862940EB2500559D0E /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CD70852940EB2500559D0E /* UIColor+Ext.swift */; };
 		39CD708C2940EEC200559D0E /* GothamBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39CD70892940EEC100559D0E /* GothamBold.ttf */; };
@@ -36,6 +35,9 @@
 		39DC185E29422DEA003EB688 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DC185D29422DEA003EB688 /* UIView+Ext.swift */; };
 		39DC186029423691003EB688 /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DC185F29423691003EB688 /* UIFont+Ext.swift */; };
 		39DC186329423CBF003EB688 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 39DC186229423CBF003EB688 /* Kingfisher */; };
+		39DC186529426384003EB688 /* NewReleasesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DC186429426384003EB688 /* NewReleasesViewModel.swift */; };
+		9055D4872942B9FB003F70AB /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055D4862942B9FB003F70AB /* LoadingCell.swift */; };
+		9055D4892942BE48003F70AB /* NewReleaseEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055D4882942BE48003F70AB /* NewReleaseEmptyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +78,6 @@
 		394CFF3C29403E49006FB3A9 /* Spotify_ChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotify_ChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		39CD707B2940E61500559D0E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		39CD707D2940E9A500559D0E /* NewReleasesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesController.swift; sourceTree = "<group>"; };
-		39CD707F2940E9D400559D0E /* TrendingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingController.swift; sourceTree = "<group>"; };
 		39CD70812940E9E700559D0E /* ArtistController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistController.swift; sourceTree = "<group>"; };
 		39CD70852940EB2500559D0E /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		39CD70892940EEC100559D0E /* GothamBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamBold.ttf; sourceTree = "<group>"; };
@@ -88,6 +89,9 @@
 		39DC185B29422BA6003EB688 /* NewReleaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleaseCell.swift; sourceTree = "<group>"; };
 		39DC185D29422DEA003EB688 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		39DC185F29423691003EB688 /* UIFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
+		39DC186429426384003EB688 /* NewReleasesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesViewModel.swift; sourceTree = "<group>"; };
+		9055D4862942B9FB003F70AB /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
+		9055D4882942BE48003F70AB /* NewReleaseEmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleaseEmptyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,7 +226,6 @@
 		39CD708F2940EF1E00559D0E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				39CD70932940EF6700559D0E /* Trending */,
 				39CD70922940EF5700559D0E /* New Releases */,
 				39CD70912940EF5200559D0E /* Common */,
 				39CD70902940EF4500559D0E /* Artist */,
@@ -242,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				39CD707B2940E61500559D0E /* TabBarController.swift */,
+				9055D4862942B9FB003F70AB /* LoadingCell.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -250,17 +254,10 @@
 			isa = PBXGroup;
 			children = (
 				39CD707D2940E9A500559D0E /* NewReleasesController.swift */,
+				39DC186429426384003EB688 /* NewReleasesViewModel.swift */,
 				39DC185829422B1F003EB688 /* Views */,
 			);
 			path = "New Releases";
-			sourceTree = "<group>";
-		};
-		39CD70932940EF6700559D0E /* Trending */ = {
-			isa = PBXGroup;
-			children = (
-				39CD707F2940E9D400559D0E /* TrendingController.swift */,
-			);
-			path = Trending;
 			sourceTree = "<group>";
 		};
 		39CD70942940EF8900559D0E /* Services */ = {
@@ -294,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				39DC185B29422BA6003EB688 /* NewReleaseCell.swift */,
+				9055D4882942BE48003F70AB /* NewReleaseEmptyCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -440,10 +438,12 @@
 				39CD707C2940E61500559D0E /* TabBarController.swift in Sources */,
 				394CFF1A29403E48006FB3A9 /* AppDelegate.swift in Sources */,
 				39CD70822940E9E700559D0E /* ArtistController.swift in Sources */,
+				39DC186529426384003EB688 /* NewReleasesViewModel.swift in Sources */,
 				39483E0B2941AA2C0071E668 /* RequestManager.swift in Sources */,
 				39DC186029423691003EB688 /* UIFont+Ext.swift in Sources */,
 				39CD7098294131C900559D0E /* RequestProtocol.swift in Sources */,
 				39483E102941B8780071E668 /* Album.swift in Sources */,
+				9055D4892942BE48003F70AB /* NewReleaseEmptyCell.swift in Sources */,
 				39DC185E29422DEA003EB688 /* UIView+Ext.swift in Sources */,
 				39483E092941A9760071E668 /* APIManager.swift in Sources */,
 				394CFF1C29403E48006FB3A9 /* SceneDelegate.swift in Sources */,
@@ -451,10 +451,10 @@
 				39483E132941BC970071E668 /* ReleaseContainer.swift in Sources */,
 				39483E0D2941B0B80071E668 /* API.swift in Sources */,
 				39CD70862940EB2500559D0E /* UIColor+Ext.swift in Sources */,
-				39CD70802940E9D400559D0E /* TrendingController.swift in Sources */,
 				39CD707E2940E9A500559D0E /* NewReleasesController.swift in Sources */,
 				39DC185C29422BA6003EB688 /* NewReleaseCell.swift in Sources */,
 				39483E172941BCF30071E668 /* Artist.swift in Sources */,
+				9055D4872942B9FB003F70AB /* LoadingCell.swift in Sources */,
 				39CD709A294131F900559D0E /* RequestType.swift in Sources */,
 				39483E152941BCA90071E668 /* Paginator.swift in Sources */,
 			);

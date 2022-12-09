@@ -112,9 +112,30 @@ extension UIView {
         return constraints
     }
     
+    @discardableResult func pinHorizontalEdges(padding: CGFloat = 0.0) -> [NSLayoutConstraint] {
+        let constraints = [
+            leadingAnchor.constraint(equalTo: safeSuperview().leadingAnchor, constant: padding),
+            trailingAnchor.constraint(equalTo: safeSuperview().trailingAnchor, constant: padding)
+        ]
+        
+        safeSuperview().addConstraints(constraints)
+        
+        return constraints
+    }
+    
     @discardableResult func centerVertically() -> [NSLayoutConstraint] {
         let constraints = [
             centerYAnchor.constraint(equalTo: safeSuperview().centerYAnchor)
+        ]
+        
+        safeSuperview().addConstraints(constraints)
+        
+        return constraints
+    }
+    
+    @discardableResult func centerHorizontally() -> [NSLayoutConstraint] {
+        let constraints = [
+            centerXAnchor.constraint(equalTo: safeSuperview().centerXAnchor)
         ]
         
         safeSuperview().addConstraints(constraints)

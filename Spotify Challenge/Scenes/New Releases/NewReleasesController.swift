@@ -17,8 +17,15 @@ class NewReleasesController: UIViewController {
         return tableView
     }()
     
-    private let requestManager = RequestManager()
-    private var newReleases: [Album] = []
+    private var dataSource = [NewReleaseSections]() {
+        didSet {
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
+    }
+    
+    private let viewModel = NewReleasesViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,45 +35,53 @@ class NewReleasesController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(NewReleaseCell.self, forCellReuseIdentifier: "ReleaseCell")
+        tableView.register(LoadingCell.self, forCellReuseIdentifier: "LoadingCell")
+        tableView.register(NewReleaseEmptyCell.self, forCellReuseIdentifier: "EmptyCell")
         view.addSubview(tableView)
         
         tableView.fullToSuperView()
         
-        fetchNewReleases()
-    }
-    
-    private func fetchNewReleases() {
-        do {
-            try requestManager.perform(API.newReleases) { [weak self] (result: Result<ReleaseContainer, Error>) in
-                guard let self = self else { return }
-                switch result {
-                case .success(let container):
-                    self.newReleases = container.albums.items
-                    
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                    }
-                    
-                    break
-                case .failure(let err):
-                    print("Error", err)
-                }
-            }
-        } catch {}
+        viewModel.fetchNewReleases { [weak self] sections in
+            self?.dataSource = sections
+        }
     }
 }
 
 extension NewReleasesController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return dataSource.count
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return newReleases.count
+        switch dataSource[section] {
+        case .releases(let albums):
+            return albums.count
+        default:
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReleaseCell", for: indexPath) as! NewReleaseCell
+        let sections = dataSource[indexPath.section]
+        switch sections {
+        case .releases(let albums):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ReleaseCell", for: indexPath) as! NewReleaseCell
+            let album = albums[indexPath.row]
+            cell.setup(album: album)
+            return cell
+        case .empty:
+            return tableView.dequeueReusableCell(withIdentifier: "EmptyCell", for: indexPath) as! NewReleaseEmptyCell
+        case .loading:
+            return tableView.dequeueReusableCell(withIdentifier: "LoadingCell", for: indexPath) as! LoadingCell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard dataSource.count > 1 else { return }
         
-        let album = newReleases[indexPath.row]
-        cell.setup(album: album)
-        
-        return cell
+        if cell.isKind(of: LoadingCell.self) {
+            viewModel.fetchNewReleases { [weak self] sections in
+                self?.dataSource = sections
+            }
+        }
     }
 }

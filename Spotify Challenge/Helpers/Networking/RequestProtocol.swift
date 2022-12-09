@@ -19,7 +19,7 @@ protocol RequestProtocol {
     
     var params: [String: Any] { get }
     
-    var urlParams: [String: String?] { get }
+    var urlParams: [String: String] { get }
     
     var addAuthorizationToken: Bool { get }
     
@@ -39,7 +39,7 @@ extension RequestProtocol {
         [:]
     }
     
-    var urlParams: [String: String?] {
+    var urlParams: [String: String] {
         [:]
     }
     
@@ -49,9 +49,17 @@ extension RequestProtocol {
     
     
     func createURLRequest(authToken: String) throws -> URLRequest {
-        guard let url = URL(string: host + path)
+        let urlString = host + path
+        var components = URLComponents(string: urlString)!
+        components.queryItems = urlParams.map { (key, value) in
+            return URLQueryItem(name: key, value: value)
+        }
+        
+        components.percentEncodedQuery = components.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
+    
+        guard let url = components.url
         else { throw NetworkError.invalidURL }
-
+        
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = requestType.rawValue
         

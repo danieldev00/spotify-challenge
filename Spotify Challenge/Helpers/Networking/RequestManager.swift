@@ -8,7 +8,7 @@
 import Foundation
 
 protocol RequestManagerProtocol {
-    func perform<T: Decodable>(_ request: RequestProtocol, completionHandler: @escaping (Result<T, Error>) -> ()) throws
+    func perform<T: Decodable>(_ request: API, completionHandler: @escaping (Result<T, Error>) -> ()) throws
 }
 
 class RequestManager: RequestManagerProtocol {
@@ -20,7 +20,7 @@ class RequestManager: RequestManagerProtocol {
         self.apiManager = apiManager
     }
     
-    func perform<T>(_ request: RequestProtocol, completionHandler: @escaping (Result<T, Error>) -> ()) throws where T : Decodable {
+    func perform<T>(_ request: API, completionHandler: @escaping (Result<T, Error>) -> ()) throws where T : Decodable {
         try apiManager.perform(request, completionHandler: { result in
             switch result {
             case .success(let data):

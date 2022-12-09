@@ -8,12 +8,12 @@
 import Foundation
 
 enum API: RequestProtocol {
-    case newReleases
+    case newReleases(offset: Int)
     case artist(id: Int)
     case genre
 }
 
-extension API {    
+extension API {
     var path: String {
         switch self {
         case .newReleases:
@@ -22,6 +22,15 @@ extension API {
             return "/artists/\(id)"
         case .genre:
             return "/recommendations/available-genre-seeds"
+        }
+    }
+    
+    var urlParams: [String : String] {
+        switch self {
+        case .newReleases(let offset):
+            return ["offset": "\(offset)"]
+        default:
+            return [:]
         }
     }
         

@@ -24,6 +24,10 @@ class APIManager: APIManagerProtocol {
                 completionHandler(.failure(err))
                 return
             }
+            
+            if let response = response as? HTTPURLResponse {
+                print("Request Status", response.statusCode)
+            }
                         
             guard let data = data,
                   let response = response as? HTTPURLResponse,
