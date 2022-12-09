@@ -37,8 +37,7 @@
 		39DC186329423CBF003EB688 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 39DC186229423CBF003EB688 /* Kingfisher */; };
 		39DC186529426384003EB688 /* NewReleasesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DC186429426384003EB688 /* NewReleasesViewModel.swift */; };
 		39E2621C29438F540085397E /* GenreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E2621B29438F540085397E /* GenreCell.swift */; };
-		9055D4872942B9FB003F70AB /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055D4862942B9FB003F70AB /* LoadingCell.swift */; };
-		9055D4892942BE48003F70AB /* NewReleaseEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055D4882942BE48003F70AB /* NewReleaseEmptyCell.swift */; };
+		9055D4892942BE48003F70AB /* NewReleaseLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055D4882942BE48003F70AB /* NewReleaseLabelCell.swift */; };
 		9055D48C2942F790003F70AB /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055D48B2942F790003F70AB /* GradientView.swift */; };
 		9055D48E29430419003F70AB /* ArtistInfoVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055D48D29430419003F70AB /* ArtistInfoVIew.swift */; };
 		9055D49029430D7F003F70AB /* ArtistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055D48F29430D7F003F70AB /* ArtistViewModel.swift */; };
@@ -98,8 +97,7 @@
 		39DC185F29423691003EB688 /* UIFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
 		39DC186429426384003EB688 /* NewReleasesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesViewModel.swift; sourceTree = "<group>"; };
 		39E2621B29438F540085397E /* GenreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCell.swift; sourceTree = "<group>"; };
-		9055D4862942B9FB003F70AB /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
-		9055D4882942BE48003F70AB /* NewReleaseEmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleaseEmptyCell.swift; sourceTree = "<group>"; };
+		9055D4882942BE48003F70AB /* NewReleaseLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleaseLabelCell.swift; sourceTree = "<group>"; };
 		9055D48B2942F790003F70AB /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		9055D48D29430419003F70AB /* ArtistInfoVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistInfoVIew.swift; sourceTree = "<group>"; };
 		9055D48F29430D7F003F70AB /* ArtistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewModel.swift; sourceTree = "<group>"; };
@@ -264,7 +262,6 @@
 			children = (
 				9055D48B2942F790003F70AB /* GradientView.swift */,
 				39CD707B2940E61500559D0E /* TabBarController.swift */,
-				9055D4862942B9FB003F70AB /* LoadingCell.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -310,7 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				39DC185B29422BA6003EB688 /* NewReleaseCell.swift */,
-				9055D4882942BE48003F70AB /* NewReleaseEmptyCell.swift */,
+				9055D4882942BE48003F70AB /* NewReleaseLabelCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -491,7 +488,7 @@
 				39DC186029423691003EB688 /* UIFont+Ext.swift in Sources */,
 				39CD7098294131C900559D0E /* RequestProtocol.swift in Sources */,
 				39483E102941B8780071E668 /* Album.swift in Sources */,
-				9055D4892942BE48003F70AB /* NewReleaseEmptyCell.swift in Sources */,
+				9055D4892942BE48003F70AB /* NewReleaseLabelCell.swift in Sources */,
 				39DC185E29422DEA003EB688 /* UIView+Ext.swift in Sources */,
 				39483E092941A9760071E668 /* APIManager.swift in Sources */,
 				394CFF1C29403E48006FB3A9 /* SceneDelegate.swift in Sources */,
@@ -505,7 +502,6 @@
 				39483E172941BCF30071E668 /* Artist.swift in Sources */,
 				90EFCA852943514E00A02069 /* Genres.swift in Sources */,
 				39E2621C29438F540085397E /* GenreCell.swift in Sources */,
-				9055D4872942B9FB003F70AB /* LoadingCell.swift in Sources */,
 				39CD709A294131F900559D0E /* RequestType.swift in Sources */,
 				39483E152941BCA90071E668 /* Paginator.swift in Sources */,
 				90EFCA812943504A00A02069 /* GenresController.swift in Sources */,

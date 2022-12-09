@@ -41,11 +41,12 @@ final class NewReleasesViewModel {
                         return
                     }
                     
-                    let section = NewReleaseSections.releases(self.albums)
-                    completion([
-                        section,
-                        .loading
-                    ])
+                    var section = [NewReleaseSections.releases(self.albums)]
+                    if container.albums.hasMore {
+                        section += [.loading]
+                    }
+                    
+                    completion(section)
                     
                     return
                 case .failure(let err):

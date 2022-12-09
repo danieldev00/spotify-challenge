@@ -7,12 +7,13 @@
 
 import UIKit
 
-class NewReleaseEmptyCell: UITableViewCell {
+class NewReleaseLabelCell: UITableViewCell {
 
     private let label: UILabel = {
         let label = UILabel()
         label.font = .appBold(size: 16)
-        label.text = "Nothing to see here!"
+        label.textColor = .lightGray
+        label.textAlignment = .center
         label.numberOfLines = 1
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -39,5 +40,9 @@ class NewReleaseEmptyCell: UITableViewCell {
         label.centerVertically()
         label.pinHorizontalEdges(padding: 16)
         label.heightAnchor.constraint(equalToConstant: 20).isActive = true
+    }
+    
+    func setup(title: String) {
+        label.text = title
     }
 }

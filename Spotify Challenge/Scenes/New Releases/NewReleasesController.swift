@@ -37,8 +37,7 @@ class NewReleasesController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(NewReleaseCell.self, forCellReuseIdentifier: "ReleaseCell")
-        tableView.register(LoadingCell.self, forCellReuseIdentifier: "LoadingCell")
-        tableView.register(NewReleaseEmptyCell.self, forCellReuseIdentifier: "EmptyCell")
+        tableView.register(NewReleaseLabelCell.self, forCellReuseIdentifier: "LabelCell")
         view.addSubview(tableView)
         
         tableView.fullToSuperView()
@@ -77,16 +76,20 @@ extension NewReleasesController: UITableViewDelegate, UITableViewDataSource {
             cell.setup(album: album)
             return cell
         case .empty:
-            return tableView.dequeueReusableCell(withIdentifier: "EmptyCell", for: indexPath) as! NewReleaseEmptyCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! NewReleaseLabelCell
+            cell.setup(title: "Nothing to see here!")
+            return cell
         case .loading:
-            return tableView.dequeueReusableCell(withIdentifier: "LoadingCell", for: indexPath) as! LoadingCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! NewReleaseLabelCell
+            cell.setup(title: "Loading...")
+            return cell
         }
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard dataSource.count > 1 else { return }
         
-        if cell.isKind(of: LoadingCell.self) {
+        if cell.isKind(of: NewReleaseLabelCell.self) {
             viewModel.fetchNewReleases { [weak self] sections in
                 self?.dataSource = sections
             }
