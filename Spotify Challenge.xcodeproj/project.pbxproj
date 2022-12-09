@@ -37,6 +37,12 @@
 		39DC186329423CBF003EB688 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 39DC186229423CBF003EB688 /* Kingfisher */; };
 		39DC186529426384003EB688 /* NewReleasesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DC186429426384003EB688 /* NewReleasesViewModel.swift */; };
 		39E2621C29438F540085397E /* GenreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E2621B29438F540085397E /* GenreCell.swift */; };
+		39E262212943C6CB0085397E /* APIManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E262202943C6CB0085397E /* APIManagerMock.swift */; };
+		39E262262943CC820085397E /* APIRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E262252943CC820085397E /* APIRequestMock.swift */; };
+		39E2622B2943CDB40085397E /* RequestManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E2622A2943CDB40085397E /* RequestManagerTests.swift */; };
+		39E262332943E0450085397E /* Artist.json in Resources */ = {isa = PBXBuildFile; fileRef = 39E262312943E0450085397E /* Artist.json */; };
+		39E262342943E0450085397E /* Genres.json in Resources */ = {isa = PBXBuildFile; fileRef = 39E262322943E0450085397E /* Genres.json */; };
+		39E262362943E04D0085397E /* NewReleases.json in Resources */ = {isa = PBXBuildFile; fileRef = 39E262352943E04D0085397E /* NewReleases.json */; };
 		9055D4892942BE48003F70AB /* NewReleaseLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055D4882942BE48003F70AB /* NewReleaseLabelCell.swift */; };
 		9055D48C2942F790003F70AB /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055D48B2942F790003F70AB /* GradientView.swift */; };
 		9055D48E29430419003F70AB /* ArtistInfoVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055D48D29430419003F70AB /* ArtistInfoVIew.swift */; };
@@ -97,6 +103,12 @@
 		39DC185F29423691003EB688 /* UIFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
 		39DC186429426384003EB688 /* NewReleasesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesViewModel.swift; sourceTree = "<group>"; };
 		39E2621B29438F540085397E /* GenreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCell.swift; sourceTree = "<group>"; };
+		39E262202943C6CB0085397E /* APIManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerMock.swift; sourceTree = "<group>"; };
+		39E262252943CC820085397E /* APIRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestMock.swift; sourceTree = "<group>"; };
+		39E2622A2943CDB40085397E /* RequestManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManagerTests.swift; sourceTree = "<group>"; };
+		39E262312943E0450085397E /* Artist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Artist.json; sourceTree = "<group>"; };
+		39E262322943E0450085397E /* Genres.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Genres.json; sourceTree = "<group>"; };
+		39E262352943E04D0085397E /* NewReleases.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NewReleases.json; sourceTree = "<group>"; };
 		9055D4882942BE48003F70AB /* NewReleaseLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleaseLabelCell.swift; sourceTree = "<group>"; };
 		9055D48B2942F790003F70AB /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		9055D48D29430419003F70AB /* ArtistInfoVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistInfoVIew.swift; sourceTree = "<group>"; };
@@ -186,7 +198,9 @@
 		394CFF2F29403E49006FB3A9 /* Spotify ChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				39E2621E2943C6870085397E /* Helpers */,
 				394CFF3029403E49006FB3A9 /* Spotify_ChallengeTests.swift */,
+				39E2622A2943CDB40085397E /* RequestManagerTests.swift */,
 			);
 			path = "Spotify ChallengeTests";
 			sourceTree = "<group>";
@@ -221,6 +235,7 @@
 		39CD70872940EE1E00559D0E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				39E262302943E02E0085397E /* JSON */,
 				39CD70882940EE2500559D0E /* Fonts */,
 			);
 			path = Resources;
@@ -318,6 +333,33 @@
 				39E2621B29438F540085397E /* GenreCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		39E2621E2943C6870085397E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				39E2621F2943C69B0085397E /* Mock */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		39E2621F2943C69B0085397E /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				39E262202943C6CB0085397E /* APIManagerMock.swift */,
+				39E262252943CC820085397E /* APIRequestMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		39E262302943E02E0085397E /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				39E262312943E0450085397E /* Artist.json */,
+				39E262352943E04D0085397E /* NewReleases.json */,
+				39E262322943E0450085397E /* Genres.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		9055D48A2942F765003F70AB /* Views */ = {
@@ -448,11 +490,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39E262332943E0450085397E /* Artist.json in Resources */,
 				394CFF2629403E48006FB3A9 /* LaunchScreen.storyboard in Resources */,
+				39E262362943E04D0085397E /* NewReleases.json in Resources */,
 				394CFF2329403E48006FB3A9 /* Assets.xcassets in Resources */,
 				39CD708C2940EEC200559D0E /* GothamBold.ttf in Resources */,
 				39CD708E2940EEC200559D0E /* GothamMedium.ttf in Resources */,
 				39CD708D2940EEC200559D0E /* GothamLight.ttf in Resources */,
+				39E262342943E0450085397E /* Genres.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +557,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39E262262943CC820085397E /* APIRequestMock.swift in Sources */,
+				39E2622B2943CDB40085397E /* RequestManagerTests.swift in Sources */,
+				39E262212943C6CB0085397E /* APIManagerMock.swift in Sources */,
 				394CFF3129403E49006FB3A9 /* Spotify_ChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

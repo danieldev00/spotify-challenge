@@ -29,7 +29,7 @@ final class NewReleasesViewModel {
         }
         
         do {
-            try requestManager.perform(.newReleases(offset: albums.count)) { [weak self] (result: Result<ReleaseContainer, Error>) in
+            try requestManager.perform(API.newReleases(offset: albums.count)) { [weak self] (result: Result<ReleaseContainer, Error>) in
                 guard let self = self else { return }
                 switch result {
                 case .success(let container):

@@ -12,7 +12,7 @@ final class GenresViewModel {
     
     func fetchGenres(completion: @escaping OnSuccess<[String]>) {
         do {
-            try requestManager.perform(.genres) { (result: Result<Genres, Error>) in
+            try requestManager.perform(API.genres) { (result: Result<Genres, Error>) in
                 switch result {
                 case .success(let genres):
                     completion(genres.genres)

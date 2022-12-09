@@ -17,7 +17,7 @@ final class ArtistViewModel {
     
     func fetchArtist(completion: @escaping OnSuccess<Artist>) {
         do {
-            try requestManager.perform(.artist(id: artist.id)) { [weak self] (result: Result<Artist, Error>) in
+            try requestManager.perform(API.artist(id: artist.id)) { [weak self] (result: Result<Artist, Error>) in
                 guard let self = self else { return }
                 switch result {
                 case .success(let artist):
