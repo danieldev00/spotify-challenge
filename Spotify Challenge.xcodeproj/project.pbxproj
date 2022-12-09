@@ -36,6 +36,7 @@
 		39DC186029423691003EB688 /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DC185F29423691003EB688 /* UIFont+Ext.swift */; };
 		39DC186329423CBF003EB688 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 39DC186229423CBF003EB688 /* Kingfisher */; };
 		39DC186529426384003EB688 /* NewReleasesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DC186429426384003EB688 /* NewReleasesViewModel.swift */; };
+		39E2621C29438F540085397E /* GenreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E2621B29438F540085397E /* GenreCell.swift */; };
 		9055D4872942B9FB003F70AB /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055D4862942B9FB003F70AB /* LoadingCell.swift */; };
 		9055D4892942BE48003F70AB /* NewReleaseEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055D4882942BE48003F70AB /* NewReleaseEmptyCell.swift */; };
 		9055D48C2942F790003F70AB /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055D48B2942F790003F70AB /* GradientView.swift */; };
@@ -96,6 +97,7 @@
 		39DC185D29422DEA003EB688 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		39DC185F29423691003EB688 /* UIFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
 		39DC186429426384003EB688 /* NewReleasesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesViewModel.swift; sourceTree = "<group>"; };
+		39E2621B29438F540085397E /* GenreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCell.swift; sourceTree = "<group>"; };
 		9055D4862942B9FB003F70AB /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
 		9055D4882942BE48003F70AB /* NewReleaseEmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleaseEmptyCell.swift; sourceTree = "<group>"; };
 		9055D48B2942F790003F70AB /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -313,6 +315,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		39E2621D29438F580085397E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				39E2621B29438F540085397E /* GenreCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		9055D48A2942F765003F70AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +336,7 @@
 			children = (
 				90EFCA802943504A00A02069 /* GenresController.swift */,
 				90EFCA822943505700A02069 /* GenresViewModel.swift */,
+				39E2621D29438F580085397E /* Views */,
 			);
 			path = Genres;
 			sourceTree = "<group>";
@@ -493,6 +504,7 @@
 				39DC185C29422BA6003EB688 /* NewReleaseCell.swift in Sources */,
 				39483E172941BCF30071E668 /* Artist.swift in Sources */,
 				90EFCA852943514E00A02069 /* Genres.swift in Sources */,
+				39E2621C29438F540085397E /* GenreCell.swift in Sources */,
 				9055D4872942B9FB003F70AB /* LoadingCell.swift in Sources */,
 				39CD709A294131F900559D0E /* RequestType.swift in Sources */,
 				39483E152941BCA90071E668 /* Paginator.swift in Sources */,
@@ -665,6 +677,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Spotify Challenge/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -691,6 +704,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Spotify Challenge/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

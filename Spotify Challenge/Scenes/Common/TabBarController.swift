@@ -17,7 +17,7 @@ class TabBarController: UITabBarController {
         
         viewControllers = [
             createNavController(for: NewReleasesController(), title: "New Releases", icon: ""),
-            createNavController(for: NewReleasesController(), title: "Trending", icon: "")
+            createNavController(for: GenresController(), title: "Genres", icon: "")
         ]
     }
 

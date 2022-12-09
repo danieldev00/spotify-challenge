@@ -10,18 +10,12 @@ import Foundation
 final class GenresViewModel {
     private let requestManager = RequestManager()
     
-    init() {
-        ///
-    }
-    
-    func fetchArtist(completion: @escaping OnSuccess<Artist>) {
+    func fetchGenres(completion: @escaping OnSuccess<[String]>) {
         do {
-            try requestManager.perform(.genres) { [weak self] (result: Result<Artist, Error>) in
-                guard let self = self else { return }
+            try requestManager.perform(.genres) { (result: Result<Genres, Error>) in
                 switch result {
-                case .success(let artist):
-                    self.artist = artist
-                    completion(artist)
+                case .success(let genres):
+                    completion(genres.genres)
                     return
                 case .failure(let err):
                     print("Error", err)
