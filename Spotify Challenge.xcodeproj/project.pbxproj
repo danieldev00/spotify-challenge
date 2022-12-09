@@ -41,6 +41,9 @@
 		9055D48C2942F790003F70AB /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055D48B2942F790003F70AB /* GradientView.swift */; };
 		9055D48E29430419003F70AB /* ArtistInfoVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055D48D29430419003F70AB /* ArtistInfoVIew.swift */; };
 		9055D49029430D7F003F70AB /* ArtistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055D48F29430D7F003F70AB /* ArtistViewModel.swift */; };
+		90EFCA812943504A00A02069 /* GenresController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EFCA802943504A00A02069 /* GenresController.swift */; };
+		90EFCA832943505700A02069 /* GenresViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EFCA822943505700A02069 /* GenresViewModel.swift */; };
+		90EFCA852943514E00A02069 /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EFCA842943514E00A02069 /* Genres.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +101,9 @@
 		9055D48B2942F790003F70AB /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		9055D48D29430419003F70AB /* ArtistInfoVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistInfoVIew.swift; sourceTree = "<group>"; };
 		9055D48F29430D7F003F70AB /* ArtistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewModel.swift; sourceTree = "<group>"; };
+		90EFCA802943504A00A02069 /* GenresController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresController.swift; sourceTree = "<group>"; };
+		90EFCA822943505700A02069 /* GenresViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresViewModel.swift; sourceTree = "<group>"; };
+		90EFCA842943514E00A02069 /* Genres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +139,7 @@
 				39483E122941BC970071E668 /* ReleaseContainer.swift */,
 				39483E142941BCA90071E668 /* Paginator.swift */,
 				39483E162941BCF30071E668 /* Artist.swift */,
+				90EFCA842943514E00A02069 /* Genres.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -232,6 +239,7 @@
 		39CD708F2940EF1E00559D0E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				90EFCA7F2943501B00A02069 /* Genres */,
 				39CD70922940EF5700559D0E /* New Releases */,
 				39CD70912940EF5200559D0E /* Common */,
 				39CD70902940EF4500559D0E /* Artist */,
@@ -311,6 +319,15 @@
 				9055D48D29430419003F70AB /* ArtistInfoVIew.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		90EFCA7F2943501B00A02069 /* Genres */ = {
+			isa = PBXGroup;
+			children = (
+				90EFCA802943504A00A02069 /* GenresController.swift */,
+				90EFCA822943505700A02069 /* GenresViewModel.swift */,
+			);
+			path = Genres;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,6 +476,7 @@
 				39DC186529426384003EB688 /* NewReleasesViewModel.swift in Sources */,
 				9055D48E29430419003F70AB /* ArtistInfoVIew.swift in Sources */,
 				39483E0B2941AA2C0071E668 /* RequestManager.swift in Sources */,
+				90EFCA832943505700A02069 /* GenresViewModel.swift in Sources */,
 				39DC186029423691003EB688 /* UIFont+Ext.swift in Sources */,
 				39CD7098294131C900559D0E /* RequestProtocol.swift in Sources */,
 				39483E102941B8780071E668 /* Album.swift in Sources */,
@@ -474,9 +492,11 @@
 				39CD707E2940E9A500559D0E /* NewReleasesController.swift in Sources */,
 				39DC185C29422BA6003EB688 /* NewReleaseCell.swift in Sources */,
 				39483E172941BCF30071E668 /* Artist.swift in Sources */,
+				90EFCA852943514E00A02069 /* Genres.swift in Sources */,
 				9055D4872942B9FB003F70AB /* LoadingCell.swift in Sources */,
 				39CD709A294131F900559D0E /* RequestType.swift in Sources */,
 				39483E152941BCA90071E668 /* Paginator.swift in Sources */,
+				90EFCA812943504A00A02069 /* GenresController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

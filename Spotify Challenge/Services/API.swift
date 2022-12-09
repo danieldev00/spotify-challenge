@@ -10,7 +10,7 @@ import Foundation
 enum API: RequestProtocol {
     case newReleases(offset: Int)
     case artist(id: String)
-    case genre
+    case genres
 }
 
 extension API {
@@ -20,7 +20,7 @@ extension API {
             return "/browse/new-releases"
         case .artist(let id):
             return "/artists/\(id)"
-        case .genre:
+        case .genres:
             return "/recommendations/available-genre-seeds"
         }
     }
